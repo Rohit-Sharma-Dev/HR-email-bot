@@ -1,0 +1,12 @@
+Subject: Exploring Backend Engineer opportunities at {{company}}
+
+Hi {{name}},
+
+I've been following {{company}}'s engineering efforts and scalable backend infrastructure, and wanted to connect with you directly.
+
+I am a software engineer focused on backend architecture, building robust REST/GraphQL APIs, microservices, database design, and high-throughput Node.js systems. I'm keen to explore potential {{role}} engineering openings on your team at {{company}}.
+
+I would appreciate the chance to share my background with you or the relevant hiring manager. Are you available for a brief conversation this week?
+
+Best regards,
+Rohit

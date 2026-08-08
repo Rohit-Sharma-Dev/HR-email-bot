@@ -1,0 +1,12 @@
+Subject: Final check-in: {{role}} role at {{company}}
+
+Hi {{name}},
+
+One final quick nudge from my end regarding {{role}} opportunities at {{company}}.
+
+I don't want to overflow your inbox, so this will be my last email. If now isn't the right time, no worries at all—feel free to keep my details on file for any future openings.
+
+Wishing you and the {{company}} team all the best!
+
+Best regards,
+Rohit

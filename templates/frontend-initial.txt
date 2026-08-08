@@ -1,0 +1,12 @@
+Subject: Exploring Frontend Engineer roles at {{company}}
+
+Hi {{name}},
+
+I came across {{company}}'s impressive product and work in frontend development, and wanted to reach out directly.
+
+I am a software developer specializing in building fast, responsive, and intuitive web interfaces using modern JavaScript/TypeScript, React, and frontend performance optimizations. Given {{company}}'s recent growth, I'd love to learn if you're currently looking for talented {{role}} developers to join your engineering team.
+
+I have attached my resume for your review and would welcome a quick 10-minute chat to discuss how I can contribute to {{company}}.
+
+Best regards,
+Rohit

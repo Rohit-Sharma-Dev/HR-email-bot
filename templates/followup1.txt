@@ -1,0 +1,12 @@
+Subject: Re: {{role}} opportunities at {{company}}
+
+Hi {{name}},
+
+I'm following up on my note from earlier this week regarding potential {{role}} roles at {{company}}.
+
+I understand you must be very busy, so I'll keep this short. If there are any open opportunities or if it makes sense to connect with someone else on your talent team, I'd really appreciate a quick pointer!
+
+Thanks again for your time.
+
+Best regards,
+Rohit

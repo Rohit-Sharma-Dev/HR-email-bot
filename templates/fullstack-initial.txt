@@ -1,0 +1,12 @@
+Subject: Fullstack Engineer opportunities at {{company}}
+
+Hi {{name}},
+
+I am reaching out because I've admired {{company}}'s product vision and technical work, and wanted to get in touch regarding tech roles.
+
+As a fullstack software developer, I specialize in end-to-end web application development—crafting clean client-side interfaces and building reliable backend services with Node.js and modern web stack. I am very interested in exploring {{role}} developer positions at {{company}}.
+
+I would love to connect briefly to discuss how my skill set aligns with your team's current or upcoming hiring goals.
+
+Best regards,
+Rohit
