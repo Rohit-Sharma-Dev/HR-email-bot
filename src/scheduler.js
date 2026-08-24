@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const config = require('../config');
 const sheetService = require('./sheet-service');
 const emailService = require('./email-service');
@@ -121,15 +123,27 @@ async function runScheduler() {
       console.log(`[Template Engine] Using template: "${emailContent.templateName}"`);
       console.log(`[Subject]: ${emailContent.subject}`);
 
+      const attachments = [];
+      if (emailContent.attachmentPath && fs.existsSync(emailContent.attachmentPath)) {
+        attachments.push({
+          filename: path.basename(emailContent.attachmentPath),
+          path: emailContent.attachmentPath
+        });
+        console.log(`[Scheduler Attachment] Attaching resume: "${path.basename(emailContent.attachmentPath)}"`);
+      } else {
+        console.log(`[Scheduler Attachment] No resume file found for role category "${contact.roleCategory}".`);
+      }
+
       if (isDryRun) {
-        console.log(`[DRY RUN] Would send email to ${contact.email}`);
+        console.log(`[DRY RUN] Would send email to ${contact.email} with ${attachments.length} attachment(s).`);
         console.log(`[DRY RUN] Body Snippet: ${emailContent.body.substring(0, 120)}...`);
       } else {
         // Send email with automatic single retry
         await emailService.sendEmailWithRetry({
           to: contact.email,
           subject: emailContent.subject,
-          body: emailContent.body
+          body: emailContent.body,
+          attachments: attachments
         });
 
         // Determine next status

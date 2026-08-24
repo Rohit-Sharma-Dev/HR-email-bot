@@ -24,6 +24,28 @@ function getTemplateFileName(stage, roleCategory = '') {
   throw new Error(`Unsupported email stage: ${stage}`);
 }
 
+function getResumeAttachmentPath(roleCategory = '') {
+  const roleLower = (roleCategory || '').toLowerCase();
+  let baseName = 'fullstack-resume';
+  if (roleLower.includes('front')) {
+    baseName = 'frontend-resume';
+  } else if (roleLower.includes('back')) {
+    baseName = 'backend-resume';
+  }
+
+  const extensions = ['.pdf', '.docx', '.doc'];
+  const resumesDir = path.join(__dirname, '..', 'resumes');
+
+  for (const ext of extensions) {
+    const fullPath = path.join(resumesDir, baseName + ext);
+    if (fs.existsSync(fullPath)) {
+      return fullPath;
+    }
+  }
+
+  return null;
+}
+
 function renderTemplate(stage, roleCategory, data = {}) {
   const templateFileName = getTemplateFileName(stage, roleCategory);
   const templatePath = path.join(__dirname, '..', 'templates', templateFileName);
@@ -59,14 +81,19 @@ function renderTemplate(stage, roleCategory, data = {}) {
     body += OPT_OUT_FOOTER;
   }
 
+  // Determine resume attachment path for initial outreach or general dispatches
+  const attachmentPath = getResumeAttachmentPath(roleCategory);
+
   return {
     templateName: templateFileName,
     subject: subject,
-    body: body
+    body: body,
+    attachmentPath: attachmentPath
   };
 }
 
 module.exports = {
   renderTemplate,
-  getTemplateFileName
+  getTemplateFileName,
+  getResumeAttachmentPath
 };

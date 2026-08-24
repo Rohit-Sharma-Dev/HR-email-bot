@@ -1,9 +1,19 @@
+const fs = require('fs');
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
 function parseServiceAccount(jsonOrBase64) {
-  if (!jsonOrBase64) return null;
+  if (!jsonOrBase64) {
+    const defaultJsonPath = path.join(__dirname, '../modular-conduit-504911-h4-6ff297a1c205.json');
+    if (fs.existsSync(defaultJsonPath)) {
+      return JSON.parse(fs.readFileSync(defaultJsonPath, 'utf8'));
+    }
+    return null;
+  }
   const trimmed = jsonOrBase64.trim();
+  if (fs.existsSync(trimmed)) {
+    return JSON.parse(fs.readFileSync(trimmed, 'utf8'));
+  }
   if (trimmed.startsWith('{')) {
     try {
       return JSON.parse(trimmed);

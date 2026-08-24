@@ -1,27 +1,11 @@
+const fs = require('fs');
+const path = require('path');
 const { google } = require('googleapis');
 const nodemailer = require('nodemailer');
+const MailComposer = require('nodemailer/lib/mail-composer');
 const config = require('../config');
 
-function createMimeMessage({ to, from, subject, body }) {
-  const utf8Subject = `=?utf-8?B?${Buffer.from(subject).toString('base64')}?=`;
-  const messageParts = [
-    `From: ${from}`,
-    `To: ${to}`,
-    `Subject: ${utf8Subject}`,
-    `Content-Type: text/plain; charset=utf-8`,
-    `MIME-Version: 1.0`,
-    ``,
-    body
-  ];
-  const message = messageParts.join('\r\n');
-  return Buffer.from(message)
-    .toString('base64')
-    .replace(/\+/g, '-')
-    .replace(/\//g, '_')
-    .replace(/=+$/, '');
-}
-
-async function sendViaGmailApi({ to, subject, body }) {
+async function sendViaGmailApi({ to, subject, body, attachments = [] }) {
   const { clientId, clientSecret, refreshToken, senderEmail } = config.gmail;
   
   if (!clientId || !clientSecret || !refreshToken) {
@@ -32,12 +16,22 @@ async function sendViaGmailApi({ to, subject, body }) {
   oauth2Client.setCredentials({ refresh_token: refreshToken });
 
   const gmail = google.gmail({ version: 'v1', auth: oauth2Client });
-  const rawMessage = createMimeMessage({
-    to,
+
+  const mailOptions = {
     from: senderEmail || 'me',
-    subject,
-    body
-  });
+    to: to,
+    subject: subject,
+    text: body,
+    attachments: attachments
+  };
+
+  const mail = new MailComposer(mailOptions);
+  const messageBuffer = await mail.compile().build();
+  const rawMessage = messageBuffer
+    .toString('base64')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/, '');
 
   const response = await gmail.users.messages.send({
     userId: 'me',
@@ -49,7 +43,7 @@ async function sendViaGmailApi({ to, subject, body }) {
   return response.data;
 }
 
-async function sendViaNodemailer({ to, subject, body }) {
+async function sendViaNodemailer({ to, subject, body, attachments = [] }) {
   const { user, pass } = config.nodemailer;
 
   if (!user || !pass) {
@@ -64,32 +58,37 @@ async function sendViaNodemailer({ to, subject, body }) {
     }
   });
 
-  const info = await transporter.sendMail({
+  const mailOptions = {
     from: user,
     to: to,
     subject: subject,
     text: body
-  });
+  };
 
+  if (attachments && attachments.length > 0) {
+    mailOptions.attachments = attachments;
+  }
+
+  const info = await transporter.sendMail(mailOptions);
   return info;
 }
 
-async function sendEmail({ to, subject, body }) {
+async function sendEmail({ to, subject, body, attachments = [] }) {
   if (config.emailServiceType === 'nodemailer') {
-    console.log(`[Email Service] Using Nodemailer transport for recipient: ${to}`);
-    return await sendViaNodemailer({ to, subject, body });
+    console.log(`[Email Service] Using Nodemailer transport for recipient: ${to} (Attachments: ${attachments.length})`);
+    return await sendViaNodemailer({ to, subject, body, attachments });
   } else {
-    console.log(`[Email Service] Using Gmail API (OAuth2) for recipient: ${to}`);
-    return await sendViaGmailApi({ to, subject, body });
+    console.log(`[Email Service] Using Gmail API (OAuth2) for recipient: ${to} (Attachments: ${attachments.length})`);
+    return await sendViaGmailApi({ to, subject, body, attachments });
   }
 }
 
-async function sendEmailWithRetry({ to, subject, body }, maxAttempts = 2) {
+async function sendEmailWithRetry({ to, subject, body, attachments = [] }, maxAttempts = 2) {
   let attempt = 1;
   while (attempt <= maxAttempts) {
     try {
       console.log(`[Email Service] Sending email to "${to}" (Attempt ${attempt}/${maxAttempts})...`);
-      const result = await sendEmail({ to, subject, body });
+      const result = await sendEmail({ to, subject, body, attachments });
       console.log(`[Email Service] Successfully sent email to "${to}".`);
       return result;
     } catch (err) {
