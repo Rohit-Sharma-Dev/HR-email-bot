@@ -1,12 +1,22 @@
-Subject: Exploring Backend Engineer opportunities at {{company}}
+Subject: Backend Engineer opportunities at {{company}} | Node.js + GraphQL + AWS | 4+ Yrs | Immediate Joiner — Rohit Sharma
 
 Hi {{name}},
 
-I've been following {{company}}'s engineering efforts and scalable backend infrastructure, and wanted to connect with you directly.
+I'm Rohit Sharma, a Backend Engineer with 4+ years of experience building scalable Node.js systems, REST and GraphQL APIs, microservices, and database architectures deployed on AWS.
 
-I am a software engineer focused on backend architecture, building robust REST/GraphQL APIs, microservices, database design, and high-throughput Node.js systems. I'm keen to explore potential {{role}} engineering openings on your team at {{company}}.
+A quick snapshot of what I've shipped:
 
-I would appreciate the chance to share my background with you or the relevant hiring manager. Are you available for a brief conversation this week?
+🔹 Student Information System — 200,000+ students | Node.js, GraphQL, PostgreSQL, AWS | Latency reduced by 30% via query optimization
+🔹 Haryana State Govt Portal — 15,000+ users | Sole developer | Batch pipelines cutting workload by 40% | Zero bugs post-launch
+🔹 RESTful APIs at Diagright — 10,000+ daily requests | Response time reduced by 25% via caching and query tuning
+
+Backend stack: Node.js · Express.js · GraphQL · REST APIs · PostgreSQL · MongoDB · Redis · Prisma · JWT · WebSockets · AWS (EC2, S3, Lambda) · Docker · CI/CD
+
+I am an immediate joiner based in New Delhi — open to Bangalore · Pune · Gurugram · Noida · Remote
+
+
+Happy to connect for a quick call if there's a fit!
 
 Best regards,
-Rohit
+Rohit Sharma
+📞 +91 8178807004

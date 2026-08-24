@@ -1,12 +1,26 @@
-Subject: Fullstack Engineer opportunities at {{company}}
+Subject: Full Stack Engineer  at {{company}} | Node.js + React.js + AWS | 4+ Yrs | Immediate Joiner — Rohit Sharma
 
 Hi {{name}},
 
-I am reaching out because I've admired {{company}}'s product vision and technical work, and wanted to get in touch regarding tech roles.
+I'm Rohit Sharma, a Full Stack Engineer with 4+ years of experience in Node.js, React.js, TypeScript, PostgreSQL, GraphQL, and AWS. I'm currently exploring new opportunities and wanted to reach out directly.
 
-As a fullstack software developer, I specialize in end-to-end web application development—crafting clean client-side interfaces and building reliable backend services with Node.js and modern web stack. I am very interested in exploring {{role}} developer positions at {{company}}.
+A quick snapshot of what I've built:
 
-I would love to connect briefly to discuss how my skill set aligns with your team's current or upcoming hiring goals.
+🔹 Student Information System — 200,000+ students | Node.js, GraphQL, React.js, PostgreSQL, AWS | Latency reduced by 30%
+🔹 Haryana State Govt Portal — 15,000+ users | Sole developer | Zero critical bugs post-launch
+🔹 Real-Time GPS Dashboard — 90+ field agents | React.js | Response time improved by 35%
+
+Stack: Node.js · React.js · Next.js · TypeScript · PostgreSQL · MongoDB · GraphQL · Redis · AWS · Docker
+
+I am an immediate joiner based in New Delhi — open to Bangalore · Pune · Gurugram · Noida · Remote
+
+📄 Resume: https://docs.google.com/document/d/10iO2G2sATZ2MYEUZWw2TK_CmVL9bLRZV/edit
+🔗 linkedin.com/in/rohit-shharmma
+🐙 github.com/rohit-shharmma
+
+Would love to connect if there's a fit!
 
 Best regards,
-Rohit
+Rohit Sharma
+📞 +91 8178807004
+✉️ rohitshharmma@gmail.com

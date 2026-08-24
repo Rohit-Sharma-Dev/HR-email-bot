@@ -1,12 +1,21 @@
-Subject: Exploring Frontend Engineer roles at {{company}}
+Subject: Frontend Engineer roles at {{company}} | React.js + Next.js + TypeScript | 4+ Yrs | Immediate Joiner — Rohit Sharma
 
 Hi {{name}},
 
-I came across {{company}}'s impressive product and work in frontend development, and wanted to reach out directly.
+I'm Rohit Sharma, a Frontend Engineer with 4+ years of experience building fast, responsive, and production-grade web interfaces using React.js, Next.js, TypeScript, and Redux.
 
-I am a software developer specializing in building fast, responsive, and intuitive web interfaces using modern JavaScript/TypeScript, React, and frontend performance optimizations. Given {{company}}'s recent growth, I'd love to learn if you're currently looking for talented {{role}} developers to join your engineering team.
+A quick snapshot of what I've built:
 
-I have attached my resume for your review and would welcome a quick 10-minute chat to discuss how I can contribute to {{company}}.
+🔹 SIS Dashboard — 200,000+ students | React.js, Redux, GraphQL | Role-based dashboards with JWT auth
+🔹 Haryana Govt Portal UI — 15,000+ users | React.js | Responsive, accessible, compliance-grade interface
+🔹 Real-Time GPS Dashboard — 90+ field agents | React.js + Google Maps API | 35% faster response coordination
+
+Frontend stack: React.js · Next.js · TypeScript · Redux · Tailwind CSS · SCSS · HTML5 · REST APIs · GraphQL · WebSockets · Performance Optimization
+
+I am an immediate joiner based in New Delhi — open to Bangalore · Pune · Gurugram · Noida · Remote
+
+Happy to connect for a quick call if there's a fit!
 
 Best regards,
-Rohit
+Rohit Sharma
+📞 +91 8178807004

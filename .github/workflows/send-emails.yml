@@ -2,9 +2,10 @@ name: HR Cold Email Bot - Twice Daily Scheduler
 
 on:
   schedule:
-    # 2:00 PM IST (14:00 IST) -> 08:30 UTC
-    # 5:00 PM IST (17:00 IST) -> 11:30 UTC
-    - cron: '30 8,11 * * *'
+    # 9:00 AM IST -> 03:30 UTC
+    - cron: '30 3 * * *'
+    # 2:30 PM IST (14:30 IST) -> 09:00 UTC
+    - cron: '0 9 * * *'
   workflow_dispatch:
 
 jobs:

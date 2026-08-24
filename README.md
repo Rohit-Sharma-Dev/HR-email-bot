@@ -7,7 +7,7 @@ An automated, 100% **FREE** Node.js cold outreach application designed for job s
 ## 🌟 Key Features
 
 - **Mobile First Data Management**: Add HR contacts or update responses anytime from the official **Google Sheets mobile app**.
-- **100% Free & Zero Hosting Cost**: Runs on **GitHub Actions** cron schedules twice daily (2:00 PM & 5:00 PM IST).
+- **100% Free & Zero Hosting Cost**: Runs on **GitHub Actions** cron schedules twice daily (9:00 AM & 2:30 PM IST).
 - **Automated Multi-Stage Follow-up Sequence**:
   - **Stage 1 (Initial)**: Sends personalized email based on Role Category (`Frontend`, `Backend`, or `Fullstack`).
   - **Stage 2 (Follow-Up 1)**: Sends a short, distinct follow-up 3+ days after initial outreach.
@@ -177,7 +177,7 @@ You can choose either Option A (Gmail API OAuth2 - Recommended) or Option B (Nod
 
 ## ⚙️ How the Automated Schedule Works
 
-- GitHub Actions automatically triggers the bot twice a day at **2:00 PM IST (08:30 UTC)** and **5:00 PM IST (11:30 UTC)**.
+- GitHub Actions automatically triggers the bot twice a day at **9:00 AM IST (03:30 UTC)** and **2:30 PM IST (09:00 UTC)**.
 - You can also manually trigger a run anytime by going to **GitHub Actions** tab > **HR Cold Email Bot - Twice Daily Scheduler** > Click **Run workflow**.
 
 ---
