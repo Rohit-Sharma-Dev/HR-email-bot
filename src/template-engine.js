@@ -77,9 +77,9 @@ function renderTemplate(stage, roleCategory, data = {}) {
   }
 
   // Ensure opt-out footer is attached
-  if (!body.includes('unsubscribe')) {
-    body += OPT_OUT_FOOTER;
-  }
+  // if (!body.includes('unsubscribe')) {
+  //   body += OPT_OUT_FOOTER;
+  // }
 
   // Determine resume attachment path for initial outreach or general dispatches
   const attachmentPath = getResumeAttachmentPath(roleCategory);
