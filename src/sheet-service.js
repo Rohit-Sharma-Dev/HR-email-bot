@@ -5,6 +5,7 @@ function getAuthClient() {
   if (!config.serviceAccount) {
     throw new Error('Google Service Account credentials missing. Please set GOOGLE_SERVICE_ACCOUNT_JSON secret.');
   }
+  
 
   const { client_email, private_key } = config.serviceAccount;
   if (!client_email || !private_key) {
