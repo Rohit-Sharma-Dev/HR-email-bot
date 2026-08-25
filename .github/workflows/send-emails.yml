@@ -1,4 +1,4 @@
-name: HR Cold Email Bot - Twice Daily Scheduler
+name: HR Cold Email Bot - Thrice Daily Scheduler
 
 on:
   schedule:
@@ -6,6 +6,8 @@ on:
     - cron: '30 3 * * *'
     # 2:30 PM IST (14:30 IST) -> 09:00 UTC
     - cron: '0 9 * * *'
+    # 6:30 PM IST (18:30 IST) -> 13:00 UTC
+    - cron: '0 13 * * *'
   workflow_dispatch:
 
 jobs:
