@@ -1,4 +1,4 @@
-Subject: Final check-in: {{role}} role at {{company}}
+Subject: Final Check-in Regarding {{role}} at {{company}}
 
 Hi {{name}},
 

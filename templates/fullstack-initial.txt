@@ -1,4 +1,4 @@
-Subject: Full Stack Engineer  at {{company}} | Node.js + React.js + AWS | 4+ Yrs | Immediate Joiner — Rohit Sharma
+Subject: Full Stack Developer | Node.js + React.js | 4+ Yrs | Immediate Joiner
 
 Hi {{name}},
 

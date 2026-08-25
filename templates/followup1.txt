@@ -1,4 +1,4 @@
-Subject: Re: {{role}} opportunities at {{company}}
+Subject: Follow-up on {{role}} Opportunity at {{company}}
 
 Hi {{name}},
 

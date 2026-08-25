@@ -1,4 +1,4 @@
-Subject: Frontend Engineer roles at {{company}} | React.js + Next.js + TypeScript | 4+ Yrs | Immediate Joiner — Rohit Sharma
+Subject:Frontend Engineer | React.js + TypeScript | 4+ Yrs | Immediate Joiner
 
 Hi {{name}},
 

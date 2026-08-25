@@ -1,5 +1,4 @@
-Subject: Backend Engineer opportunities at {{company}} | Node.js + GraphQL + AWS | 4+ Yrs | Immediate Joiner — Rohit Sharma
-
+Subject: Backend Engineer | Node.js + GraphQL + AWS | 4+ Yrs | Immediate Joiner
 Hi {{name}},
 
 I'm Rohit Sharma, a Backend Engineer with 4+ years of experience building scalable Node.js systems, REST and GraphQL APIs, microservices, and database architectures deployed on AWS.
